@@ -3,106 +3,103 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div>
-      {/* Hero Section */}
+      {/* Hero Section - Inspirado no AI Studio */}
       <section className="hero container">
         <div className="reg-mark" style={{ top: '20px', left: '20px' }}></div>
         <div className="reg-mark" style={{ top: '20px', right: '20px' }}></div>
         
-        <div className="hero-bg-text">PROCESS</div>
+        <div className="hero-bg-text">CMYK</div>
         
-        <div style={{ maxWidth: '800px', position: 'relative', zIndex: 1 }}>
-          <span style={{ fontWeight: 900, color: 'var(--magenta)', fontSize: '0.9rem' }}>// ARTE TRANSFER STUDIO</span>
-          <h1 style={{ marginTop: '1rem' }}>Sua marca em alta definição.</h1>
-          <p style={{ fontSize: '1.2rem', margin: '2rem 0', maxWidth: '600px' }}>
-            Transformamos superfícies em canais de comunicação. Canecas, camisetas e embalagens personalizadas com rigor técnico e acabamento premium.
+        <div style={{ maxWidth: '900px', position: 'relative', zIndex: 1 }}>
+          <span style={{ fontWeight: 900, color: 'var(--cyan)', fontSize: '1rem', letterSpacing: '0.1em' }}>// ESTÚDIO DE PERSONALIZAÇÃO</span>
+          <h1 style={{ marginTop: '1rem', fontSize: 'clamp(4rem, 10vw, 8rem)', lineHeight: '0.85' }}>
+            Sua arte,<br />
+            <span style={{ color: 'transparent', WebkitTextStroke: '2px var(--black)' }}>nossa impressão.</span>
+          </h1>
+          <p style={{ fontSize: '1.25rem', margin: '3rem 0', maxWidth: '600px', fontWeight: 500 }}>
+            Cores vibrantes e qualidade premium para dar vida às suas ideias. Do desejo à sua porta no caminho mais curto possível.
           </p>
-          <a href="https://wa.me/5511999999999" className="btn-primary">
-            Solicitar Orçamento
+          <a href="#comprar" className="btn-primary" style={{ backgroundColor: 'var(--magenta)' }}>
+            Monte a Sua Agora
           </a>
         </div>
       </section>
 
-      {/* Categories Section */}
-      <section id="produtos" className="container" style={{ padding: '8rem 0' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
-          <h2>Catálogo [2026]</h2>
-          <p style={{ fontWeight: 700, opacity: 0.5 }}>CMYK / TRANSFER / SUBLIMATION</p>
+      {/* Social Proof Section - Modelado do AI Studio */}
+      <section style={{ padding: '3rem 0', borderTop: '2px solid var(--black)', borderBottom: '2px solid var(--black)', backgroundColor: 'var(--paper)' }}>
+        <div className="container" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '4rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <div style={{ display: 'flex', color: 'var(--yellow)', fontSize: '1.5rem' }}>
+              ★★★★★
+            </div>
+            <span style={{ fontWeight: 900, textTransform: 'uppercase' }}>+10.000 clientes satisfeitos</span>
+          </div>
+          <div style={{ width: '2px', height: '40px', backgroundColor: 'var(--black)', opacity: 0.2 }} className="hidden-mobile"></div>
+          <div style={{ display: 'flex', gap: '3rem', opacity: 0.5, fontWeight: 900, fontSize: '1.5rem' }}>
+            <span>VOGUE</span>
+            <span style={{ letterSpacing: '0.2em' }}>FORBES</span>
+            <span style={{ fontStyle: 'italic' }}>GQ</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Flow / 3 Passos - Inspirado no AI Studio */}
+      <section id="comprar" className="container" style={{ padding: '8rem 0' }}>
+        <div style={{ textAlign: 'center', marginBottom: '6rem' }}>
+          <h2>Sem complicação.</h2>
+          <p style={{ fontSize: '1.2rem', opacity: 0.7 }}>O processo mais rápido do mercado.</p>
         </div>
         
         <div className="grid">
-          <div className="card">
-            <span style={{ color: 'var(--cyan)', fontWeight: 900 }}>01.</span>
-            <h3>Canecas</h3>
-            <p>Porcelana e polímero. Resistência térmica e fidelidade de cor absoluta.</p>
+          <div className="card" style={{ textAlign: 'center' }}>
+            <div style={{ fontSize: '4rem', fontWeight: 900, color: 'var(--cyan)', lineHeight: 1 }}>01</div>
+            <h3 style={{ margin: '1rem 0' }}>Envie sua Arte</h3>
+            <p>Faça o upload do seu design ou conte com nossa equipe para ajustar os detalhes perfeitamente.</p>
           </div>
           
-          <div className="card">
-            <span style={{ color: 'var(--magenta)', fontWeight: 900 }}>02.</span>
-            <h3>Vestuário</h3>
-            <p>Camisetas e bonés. Estamparia com toque zero e alta durabilidade de lavagem.</p>
+          <div className="card" style={{ textAlign: 'center' }}>
+            <div style={{ fontSize: '4rem', fontWeight: 900, color: 'var(--magenta)', lineHeight: 1 }}>02</div>
+            <h3 style={{ margin: '1rem 0' }}>Aprovação</h3>
+            <p>Calibramos as cores e preparamos seu arquivo para a impressão CMYK de alta definição.</p>
           </div>
           
-          <div className="card">
-            <span style={{ color: 'var(--yellow)', fontWeight: 900 }}>03.</span>
-            <h3>Brand Pack</h3>
-            <p>Sacolas e tags. A primeira impressão do seu cliente elevada ao máximo.</p>
+          <div className="card" style={{ textAlign: 'center' }}>
+            <div style={{ fontSize: '4rem', fontWeight: 900, color: 'var(--yellow)', lineHeight: 1 }}>03</div>
+            <h3 style={{ margin: '1rem 0' }}>Receba</h3>
+            <p>Produção impecável, cores fiéis à sua tela e entrega expressa direto na sua porta.</p>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="sobre" style={{ padding: '8rem 0', backgroundColor: 'var(--black)', color: 'var(--white)', position: 'relative' }}>
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gap: '2rem' }}>
-          <div style={{ gridColumn: 'span 7' }}>
-            <h2 style={{ color: 'var(--white)' }}>O Rigor do Processo.</h2>
-            <p style={{ fontSize: '1.2rem', marginTop: '2rem', opacity: 0.8 }}>
-              Na Arte Transfer, não apenas estampamos. Nós calibramos cada cor para que sua identidade visual seja respeitada. 
-              Usamos insumos de alta qualidade que garantem que o personalizado de hoje seja o mesmo daqui a anos.
-            </p>
-          </div>
-          <div style={{ gridColumn: 'span 5', display: 'flex', flexDirection: 'column', justifyContent: 'center', borderLeft: '1px solid #333', paddingLeft: '4rem' }}>
-            <div style={{ marginBottom: '2rem' }}>
-              <div style={{ width: '40px', height: '4px', backgroundColor: 'var(--cyan)', marginBottom: '10px' }}></div>
-              <h4 style={{ color: 'var(--white)' }}>Tecnologia</h4>
-              <p style={{ fontSize: '0.9rem', opacity: 0.6 }}>Equipamentos de última geração para transfer e sublimação.</p>
+      {/* Catálogo Original da Arte Transfer */}
+      <section id="produtos" style={{ padding: '8rem 0', backgroundColor: 'var(--black)', color: 'var(--white)' }}>
+        <div className="container">
+          <h2 style={{ color: 'var(--white)', marginBottom: '4rem' }}>Catálogo Técnico</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+            <div style={{ border: '1px solid #333', padding: '2rem' }}>
+              <h3 style={{ color: 'var(--white)' }}>Canecas</h3>
+              <p style={{ opacity: 0.7 }}>Porcelana e polímero. Resistência térmica absoluta.</p>
             </div>
-            <div>
-              <div style={{ width: '40px', height: '4px', backgroundColor: 'var(--magenta)', marginBottom: '10px' }}></div>
-              <h4 style={{ color: 'var(--white)' }}>Fidelidade</h4>
-              <p style={{ fontSize: '0.9rem', opacity: 0.6 }}>Gestão de cores CMYK para resultados vibrantes.</p>
+            <div style={{ border: '1px solid #333', padding: '2rem' }}>
+              <h3 style={{ color: 'var(--white)' }}>Vestuário</h3>
+              <p style={{ opacity: 0.7 }}>Camisetas e bonés. Estamparia com toque zero.</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ / Technical Details */}
-      <section className="container" style={{ padding: '8rem 0' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8rem' }}>
-          <div>
-            <h2 style={{ fontSize: '3rem' }}>Info Técnica.</h2>
-            <div className="reg-mark" style={{ position: 'relative', marginTop: '2rem', opacity: 1 }}></div>
-          </div>
-          <div>
-            <div style={{ marginBottom: '3rem' }}>
-              <h4 style={{ borderBottom: '2px solid var(--black)', paddingBottom: '0.5rem', marginBottom: '1rem' }}>Prazos e Pedidos</h4>
-              <p>Produzimos desde unidades exclusivas até grandes tiragens. O prazo é calculado para garantir a secagem e cura perfeita das tintas.</p>
-            </div>
-            <div style={{ marginBottom: '3rem' }}>
-              <h4 style={{ borderBottom: '2px solid var(--black)', paddingBottom: '0.5rem', marginBottom: '1rem' }}>Arquivos e Arte</h4>
-              <p>Aceitamos PDF, AI e CDR. Nossa equipe revisa sua arte antes da produção para evitar erros de impressão.</p>
+            <div style={{ border: '1px solid #333', padding: '2rem' }}>
+              <h3 style={{ color: 'var(--white)' }}>Brand Pack</h3>
+              <p style={{ opacity: 0.7 }}>Sacolas e tags. A primeira impressão do seu cliente.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section id="contato" style={{ padding: '8rem 0', textAlign: 'center', borderTop: '1px solid #eee' }}>
+      <section id="contato" style={{ padding: '8rem 0', textAlign: 'center', borderTop: '4px solid var(--cyan)' }}>
         <div className="container">
-          <h2>Vamos imprimir?</h2>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginTop: '4rem' }}>
-            <a href="https://wa.me/5511999999999" className="btn-primary">WhatsApp</a>
-            <a href="mailto:contato@artetransfer.com.br" className="btn-primary" style={{ backgroundColor: 'transparent', color: 'var(--black)', border: '2px solid var(--black)', boxShadow: 'none' }}>Email</a>
-          </div>
+          <h2 style={{ fontSize: '3rem' }}>Pronto para imprimir?</h2>
+          <p style={{ marginBottom: '3rem', fontSize: '1.2rem' }}>Fale conosco no WhatsApp e inicie seu pedido.</p>
+          <a href="https://wa.me/5511999999999" className="btn-primary" style={{ fontSize: '1.5rem', padding: '1.5rem 3rem' }}>
+            Iniciar Orçamento
+          </a>
         </div>
       </section>
     </div>
